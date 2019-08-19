@@ -1,0 +1,104 @@
+﻿@model LDForum.Models.Forum.ForumTopicModel
+
+
+<div class="container body-content">
+    <div class="row sectionHeader">
+        <div class="sectionHeading">
+            <span>@Model.Forum.Name Forum</span>
+
+            @if (Context.User.Identity.IsAuthenticated)
+            {
+                <span id="headingBtn">
+                    <a asp-controller="Post"
+                       asp-action="Create"
+                       asp-route-id="@Model.Forum.Id" class="btn btn-newPost">Create Post</a>
+                </span>
+            }
+            <form asp-controller="Forum" asp-action="Search" method="post">
+                <div calss="searchForm">
+                    <input asp-for="SearchQuery" type="text" placeholder="Search..." class="searchBar" onfocus="clearThis(this)">
+                    <button type="submit" class="btn btn-forumSearch">
+                        <i class="material-icons">search</i>
+                    </button>
+                </div>
+                <input asp-for="Forum.Id" name="id" type="hidden" />
+            </form>
+        </div>
+        <div class="sectionDescription">
+            <div class="forumLogo" style="background-image:url(@Model.Forum.ImageUrl)"></div>
+            <p> Добро пожаловать в раздел @Model.Forum.Name форума </p>
+            @if (!User.Identity.IsAuthenticated)
+            {
+                <p>
+                    <span>
+                        Вы должны быть
+                        <a asp-controller="Account" asp-action="Register">зарегестрированым пользователем</a> для создания поста
+                    </span>
+                </p>
+            }
+        </div>
+    </div>
+
+<div class="row forumIndexContent">
+    @if (Model.Posts.Any())
+    {
+        <table class="table table-hover table-bordered" id="forumIndexTable">
+            <tbody>
+                @foreach (var post in Model.Posts)
+                {
+                    <tr>
+                        <td>
+                            <div class="postData">
+                                <div class="postTitle">
+                                    <a asp-controller="Post" asp-action="Index" asp-route-id="@post.Id">@post.Title</a>
+                                </div>
+                                <div class="forumSubTitle">
+                                    <div>
+                                        <span class="postAuthor">
+                                            <a asp-controller="Profile" asp-action="Detail" asp-route-id="@post.AuthorId">
+                                                @post.AuthorName
+                                            </a>
+                                        </span>
+                                        (@post.AuthorRating) 
+                                        <span class="postDate">
+                                            @post.DatePosted
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+            
+                        <td>
+                            <div class="forumPostCount">
+                                Ответить: @post.RepliesCount
+                            </div>
+                        </td>
+                        <td>
+                            <div class="postDate">@post.DatePosted</div>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <div class="noPosts">
+            <i class="material-icons md-72">ответ на вопрос</i>
+            <h3>
+                Похоже тут нет поста. Создать
+                <a asp-controller="Post" asp-action="Create" asp-route-id="@Model.Forum.Id">
+                    <span>Пост??</span>
+                </a>
+            </h3>
+        </div>
+    }
+</div>
+</div>
+@section Scripts{
+    <script>
+        function clearThis(target) {
+            target.value = "";
+        }
+    </script>
+}

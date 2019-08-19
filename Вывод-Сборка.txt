@@ -1,0 +1,7 @@
+﻿1>------ Сборка начата: проект: LDForum, Конфигурация: Debug Any CPU ------
+1>C:\Program Files\dotnet\sdk\2.1.507\Sdks\Microsoft.NET.Sdk\targets\Microsoft.NET.ObsoleteReferences.targets(33,5): warning NETSDK1059: инструмент "Microsoft.EntityFrameworkCore.Tools.DotNet" теперь включен в пакет SDK для .NET Core. Сведения о том, как устранить это предупреждение: https://aka.ms/dotnetclitools-in-box.
+1>C:\Program Files\dotnet\sdk\2.1.507\Sdks\Microsoft.NET.Sdk\targets\Microsoft.NET.ObsoleteReferences.targets(33,5): warning NETSDK1059: инструмент "Microsoft.Extensions.SecretManager.Tools" теперь включен в пакет SDK для .NET Core. Сведения о том, как устранить это предупреждение: https://aka.ms/dotnetclitools-in-box.
+1>Controllers\ForumController.cs(17,32,17,44): warning CS0169: Поле "ForumController._postService" никогда не используется.
+1>LDForum -> C:\Users\Syst\source\repos\LDForum\LDForum\bin\Debug\netcoreapp2.0\LDForum.dll
+1>Сборка проекта "LDForum.csproj" завершена.
+========== Сборка: успешно: 1, с ошибками: 0, без изменений: 2, пропущено: 0 ==========
