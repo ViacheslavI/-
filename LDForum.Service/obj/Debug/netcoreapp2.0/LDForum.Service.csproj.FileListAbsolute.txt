@@ -1,0 +1,12 @@
+C:\Users\Syst\source\repos\LDForum\LDForum.Service\bin\Debug\netcoreapp2.0\LDForum.Service.deps.json
+C:\Users\Syst\source\repos\LDForum\LDForum.Service\bin\Debug\netcoreapp2.0\LDForum.Service.dll
+C:\Users\Syst\source\repos\LDForum\LDForum.Service\bin\Debug\netcoreapp2.0\LDForum.Service.pdb
+C:\Users\Syst\source\repos\LDForum\LDForum.Service\bin\Debug\netcoreapp2.0\LDForum.Data.dll
+C:\Users\Syst\source\repos\LDForum\LDForum.Service\bin\Debug\netcoreapp2.0\LDForum.Data.pdb
+C:\Users\Syst\source\repos\LDForum\LDForum.Service\obj\Debug\netcoreapp2.0\LDForum.Service.csprojAssemblyReference.cache
+C:\Users\Syst\source\repos\LDForum\LDForum.Service\obj\Debug\netcoreapp2.0\LDForum.Service.csproj.CoreCompileInputs.cache
+C:\Users\Syst\source\repos\LDForum\LDForum.Service\obj\Debug\netcoreapp2.0\LDForum.Service.AssemblyInfoInputs.cache
+C:\Users\Syst\source\repos\LDForum\LDForum.Service\obj\Debug\netcoreapp2.0\LDForum.Service.AssemblyInfo.cs
+C:\Users\Syst\source\repos\LDForum\LDForum.Service\obj\Debug\netcoreapp2.0\LDForum.Service.csproj.CopyComplete
+C:\Users\Syst\source\repos\LDForum\LDForum.Service\obj\Debug\netcoreapp2.0\LDForum.Service.dll
+C:\Users\Syst\source\repos\LDForum\LDForum.Service\obj\Debug\netcoreapp2.0\LDForum.Service.pdb
